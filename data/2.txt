@@ -1,0 +1,9 @@
+4Lilibogota
+Nombre Combo: combo corral queso
+
+ 		Items: 
+
+		   artículo: corral queso  , valor: 16000  , calorias: 20
+		   artículo: papas medianas  , valor: 5500  , calorias: 100
+		   artículo: gaseosa  , valor: 5000  , calorias: 30
+26505033153150

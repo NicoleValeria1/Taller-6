@@ -1,0 +1,23 @@
+******************  FACTURA DE COMPRA  ********************
+
+Nombre cliente : Liliana
+Dirección cliente : Fontanar
+Id Pedido :1
+
+
+DETALLE DE ARTICULOS ORDENADOS
+
+
+
+   Artículo: todoterreno  , Valor: $25000  , Calorias: 40
+  Ingredientes Adicionados:
+    tomate ,  $1000 ,  Calorias:5
+
+
+TOTAL CALORIAS       : 45
+TOTAL NETO PEDIDO    : $26000
+TOTAL IVA            : $4940
+TOTAL PEDIDO CON IVA : $30940
+***********************************************************
+
+

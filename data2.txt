@@ -1,0 +1,9 @@
+4LilianaFontanar
+Nombre Combo: combo todoterreno
+
+ 		Items: 
+
+		   artículo: todoterreno  , valor: 25000
+		   artículo: papas grandes  , valor: 6900
+		   artículo: gaseosa  , valor: 5000
+25834903073
