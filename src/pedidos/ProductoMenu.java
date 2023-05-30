@@ -40,7 +40,7 @@ public class ProductoMenu implements IProducto
 		valorPrecio=Integer.toString(numPrecio);
 		stCalorias=Integer.toString(numCalorias);
 		
-		cadena= "   Artículo: " + nombre + "  , Valor: $"+ valorPrecio+"  , Calorias: "+ stCalorias;
+		cadena= "Artículo: " + nombre + ", Valor: $"+ valorPrecio+", Calorias: "+ stCalorias;
 		return cadena;
 	}
 

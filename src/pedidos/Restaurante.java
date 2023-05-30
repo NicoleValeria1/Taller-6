@@ -126,6 +126,7 @@ public class Restaurante {
 		
 		if (lineaarchivo!="")
 		{
+			try {
 			posicion=lineaarchivo.indexOf(";");
 		    nombreIngrediente=lineaarchivo.substring(0, posicion);
 		    datosCombo2=lineaarchivo.substring(posicion+1, lineaarchivo.length());
@@ -137,7 +138,11 @@ public class Restaurante {
 		    
 		    Ingrediente nuevoIngrediente = new Ingrediente();
 			nuevoIngrediente.ingrediente(nombreIngrediente, precioIngrediente,caloriasIngrediente);
-		    ingredientes.add(nuevoIngrediente);
+		    ingredientes.add(nuevoIngrediente);}
+		    
+		    catch (IngredienteRepetidoException ex) {
+			    ex.ingredienteRepetidoException(Ingrediente,nombreIngrediente);
+			}
 	
 		}
 	}
@@ -206,6 +211,8 @@ public class Restaurante {
 		
 		if (lineaarchivo!= "")
 		{
+			try {
+			
 			posicion=lineaarchivo.indexOf(";");
 		    nombreProducto=lineaarchivo.substring(0, posicion);
 		    datosCombo2=lineaarchivo.substring(posicion+1, lineaarchivo.length());
@@ -219,7 +226,11 @@ public class Restaurante {
 		    
 		    ProductoMenu nuevoProducto = new ProductoMenu();
 			nuevoProducto.productoMenu(nombreProducto, precioProducto,caloriasProducto);
-		    menuBase.add(nuevoProducto);
+		    menuBase.add(nuevoProducto);}
+		    
+		    catch (ProductoRepetidoException ex) {
+			    ex.productoRepetidoException(ProductoMenu,nombreProducto);
+			}
 		 
 		}
 	}

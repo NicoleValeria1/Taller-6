@@ -50,16 +50,15 @@ public class ProductoAjustado implements IProducto{
 		cadenaImprimir=base.generarTextoFactura();
 		for (Ingrediente ingredienteExtra : agregados)
 		{
-			cadenaImprimir=cadenaImprimir+"\n"+ "  Ingredientes Adicionados:"+"\n"+
-							"    " + ingredienteExtra.getNombre()+
-							" ,  $" + Integer.toString(ingredienteExtra.getCostoAdiconal()) +
-							" ,  Calorias:" + Integer.toString(ingredienteExtra.getCalorias());
+			cadenaImprimir=cadenaImprimir+"\n"+ "  Ingredientes Adicionados: "+"\n"+ ingredienteExtra.getNombre()+
+							", $" + Integer.toString(ingredienteExtra.getCostoAdiconal()) +
+							", Calorias:" + Integer.toString(ingredienteExtra.getCalorias());
 		}
 		for (Ingrediente ingredienteQuitar : eliminados)
 		{
-			cadenaImprimir=cadenaImprimir+"\n"+ "  Ingredientes Eliminados:"+"\n"+
-					"    " + ingredienteQuitar.getNombre()+
-					" ,  Calorias:" + Integer.toString(ingredienteQuitar.getCalorias());
+			cadenaImprimir=cadenaImprimir+"\n"+ "Ingredientes Eliminados:"+"\n"+
+					ingredienteQuitar.getNombre()+
+					", Calorias: " + Integer.toString(ingredienteQuitar.getCalorias());
 	
 		}
 		cadenaImprimir=cadenaImprimir+"\n";

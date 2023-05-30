@@ -54,11 +54,11 @@ public class Combo implements IProducto{
 	public String generarTextoFactura()	
 	{
 		String cadenaImprimir;
-		cadenaImprimir="   Nombre Combo: "+ nombreCombo+"\n\n";
-		cadenaImprimir= cadenaImprimir+" 		Items: ";
+		cadenaImprimir="Nombre Combo: "+ nombreCombo+"\n";
+		cadenaImprimir= cadenaImprimir+"Items: ";
 		for (ProductoMenu itemCombo : itemsCombo)
 		{
-			cadenaImprimir=cadenaImprimir+"\n" + "		"+itemCombo.generarTextoFactura();
+			cadenaImprimir=cadenaImprimir+"\n"+itemCombo.generarTextoFactura();
 		}
 		
 		return cadenaImprimir;

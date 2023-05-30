@@ -62,10 +62,17 @@ public class Pedido {
 	
 	public void agregarProducto(IProducto nuevoItem)
 	{
-		itemsPedido.add(nuevoItem);
+		int total = getPrecioTotalPedido();
+		try {
+		itemsPedido.add(nuevoItem);}
+		catch(PedidoSuperiorException ex) {
+		    ex.pedidoSuperiorException(total);
+		}
+			
+		}
 		
 	}
-	private int getPrecioNetoPedido()
+	public int getPrecioNetoPedido()
 	{
 		
 		int precioBase=0;
@@ -79,7 +86,7 @@ public class Pedido {
 		return precioBase;
 	}
 	
-	private int getPrecioIVAPedido()
+	public int getPrecioIVAPedido()
 	{
 		int precioBase=getPrecioNetoPedido();
 		int valorIVA=(int)(precioBase*0.19);
@@ -87,7 +94,7 @@ public class Pedido {
 				
 	}
 	
-	private int getPrecioTotalPedido()
+	public int getPrecioTotalPedido()
 	{
 		int precioBase=getPrecioNetoPedido();
 		int valorIVA=getPrecioIVAPedido();
@@ -96,7 +103,7 @@ public class Pedido {
 		
 	}
 	
-	private int getCaloriasTotalPedido()
+	public int getCaloriasTotalPedido()
 	{
 		int caloriasBase=0;
 			
@@ -155,7 +162,7 @@ public class Pedido {
 		return igual;
     }
 	
-	private String generarTextoFactura()	
+	public String generarTextoFactura()	
 	{
 		String cadenaImprimir;
 		int idPedido=getIdPedido();
